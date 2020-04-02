@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!--
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+-->
+
+    <link href="css/style.css" rel="stylesheet"  type="text/css"/>
+    <script type="text/javascript" src="js/payment.js"></script>
+
+
+    <title>Payment</title>
+
+
+</head>
+<body>
+<div class="container">
+    <div class="row pt-3" id="chosenPlaceInfo">
+
+    </div>
+    <div class="row">
+        <form>
+            <div class="form-group">
+                <label for="fullName"  class="sr-only">Name</label>
+                <input type="text" class="form-control" id="fullName" name="fullName" placeholder="Name">
+            </div>
+            <div class="form-group">
+                <label for="phone"  class="sr-only">Telephone number</label>
+                <input type="text" class="form-control" id="phone" name="phone" placeholder="Telephone number">
+            </div>
+            <button type="submit" class="btn btn-success" onclick="makeOrder()">Pay</button>
+            <button type="button" class="btn btn-success" onclick="goToMain()">Main page</button>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

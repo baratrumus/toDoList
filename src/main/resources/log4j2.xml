@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- указываем, что логгер будет обрабатывать все исключения с уровень WARN и выше. Т.е. warn и error -->
+<!-- trace debug info warn error -->
+<Configuration status="INFO">
+
+    <!--Указывает на хранилище сообщений. В данном примере мы сообщения выводим в лог.-->
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+        </Console>
+    </Appenders>
+
+    <!--Этот кусок кода указывает уровни логера для конкретных пакетов.-->
+    <Loggers>
+        <!-- для конкретного пакета -->
+        <Logger name="servlets" level="trace" additivity="false">
+            <AppenderRef ref="Console"/>
+        </Logger>
+     <!-- Здесь для всех пакетов, не отдельно -->
+        <Root level="warn">
+            <AppenderRef ref="Console"/>
+        </Root>
+    </Loggers>
+</Configuration>

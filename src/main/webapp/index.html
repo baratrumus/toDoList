@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ <!--
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  -->
+
+      <script type="text/javascript" src="js/list.js"></script>
+      <link href="css/style.css" rel="stylesheet"  type="text/css"/>
+
+      <title>To do List.</title>
+
+</head>
+<body>
+
+
+<div class="container">
+    <div class="editor-field">
+        <form id="formAddItem"  class="form-signin">
+            <h1 class="h3 mb-3 font-weight-normal">Add new task:</h1>
+
+            <b>Description:</b><br>
+            <textarea rows="5" name='description' id="description" class="form-control" required autofocus>
+            </textarea>
+
+            <input  type='submit' value="Add Task" onclick="addTask()"/>
+        </form>
+    </div>
+</div>
+
+<br>
+<div class="container">
+   <b>Check to list only Done tasks:</b>
+   <input id="chbDone" type="checkbox" onclick="loadItems()"/>
+
+</div>
+
+<div class="container">
+    <h3  align="center">Current tasks:</h3>
+    <table class="table" id="currentItems">
+        <thead>
+        <tr>
+            <th>Number</th>
+            <th>Description</th>
+            <th>Creation date</th>
+            <th>Done</th>
+            <th>Change State</th>
+        </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</div>
+</body>
+</html>

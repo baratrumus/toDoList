@@ -1,0 +1,15 @@
+body, html {
+    background: #333;
+    color: #ef8f1a; /* text*/
+}
+
+.wd {
+   width: 120px;
+}
+
+.editor-field textarea {
+    width : 400px;
+    height : 100px;
+}
+
+
