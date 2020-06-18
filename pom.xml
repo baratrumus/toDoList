@@ -10,7 +10,7 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <jackson.core>2.9.10.3</jackson.core>
+        <jackson.core>2.10.0.pr1</jackson.core>
     </properties>
 
 
