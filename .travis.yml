@@ -1,0 +1,31 @@
+# используем язык java. Travis CI поддерживает другие языки тоже.
+language: java
+jdk:
+ - openjdk11
+
+services:
+  - postgresql
+
+
+before_install:
+  - psql -c 'create database hiberItems;' -U postgres
+
+#before_script:
+
+
+# используем режим обычного пользователя для сборки проекта.
+sudo: false
+
+
+
+# Отправлять уведомление на почту youremail@smtp.ru(Изменить на свою) если сборка упала
+notifications:
+  email:
+    recipients:
+      voldores@mail.ru
+    on_success: never # default: change
+    on_failure: always # default: always
+
+
+
+
